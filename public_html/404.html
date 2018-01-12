@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> 404 - Page not found!  </title>
+		<link rel="stylesheet" href="style.css"/>
+    <head>
+	
+	<body>
+		<div id="heading">
+			<h1>Oops!</h1>
+		</div>
+		<div id="content">
+			<div id="message">
+				<p>We couldn't find the page you were looking for.</p>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+			var refPage = document.referrer;
+			var node;
+			if(refPage.length != 0) {
+				node = document.createElement("p");
+				var prevLink = document.createElement("a")
+				
+				var linkText = document.createTextNode("your previous page");
+				prevLink.setAttribute('href', refPage);
+				prevLink.appendChild(linkText);
+				
+				var textNode = document.createTextNode("You can return to ");
+				
+				node.appendChild(textNode);
+				node.appendChild(prevLink);
+				
+				document.getElementById("message").appendChild(node);
+			} else {
+				node = document.createElement("p");
+				var nodeText = document.createTextNode("You should double check the address that you typed, or update your bookmarks.");
+				node.appendChild(nodeText);
+				
+			}
+			
+			document.getElementById("message").appendChild(node);
+	</script>
+</html>

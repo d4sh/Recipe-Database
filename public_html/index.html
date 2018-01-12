@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>COMP 2406 Recipe Viewer</title>
+		<link rel="stylesheet" href="style.css"/>
+		<script src="recipeDiv.js"></script>
+		<meta charset="utf-8">
+	</head>
+	
+	<body>
+		<div id="heading">
+			<h1> Comp2406 A2 Recipes! </h1>
+		</div>
+
+		<div id="content">
+			<!-- Put the selector here -->
+			<table>
+				<tr>
+					<td><label id="ddLabel">Recipe: </label></td>
+				</tr>
+				<tr>
+					<td colspan="3"><select id="recipeSelect"></select></td>
+				</tr>
+
+				<tr id="buttonRow">
+					<td><button type="button" id="view">View</button></td>
+					<td><button type="button" id="update">Update</button></td>
+					<td><img id="check"/></td>
+				</tr>
+			</table>
+			<div id="warning">
+			</div>
+			
+			<hr id="hrLine">
+
+			<!-- recipe display and editor -->
+			<div id="editor">
+				<label>Duration:</label>
+				<br>
+				<input type="text" value="" id="recDuration" size="15">
+				<br>
+				<label>Ingredients:</label>
+				<br>
+				<textarea id="recIngredients" cols="88" rows="5">
+				</textarea>
+				<br>
+				<label>Steps:</label>
+				<br>
+				<textarea id="recSteps" cols="88" rows="4">
+				</textarea>
+				<br>
+				<label>Notes:</label>
+				<br>
+				<textarea id="recNotes" cols="25" rows="3">
+				</textarea>
+			</div>
+		</div>
+	</body>
+</html>
