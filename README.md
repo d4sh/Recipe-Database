@@ -1,7 +1,6 @@
 # Recipe Database
 
 Akhil Dalal (me)
------------------------
 
 Run the server from where app.js is located (node app.js)
 
